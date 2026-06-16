@@ -1,0 +1,204 @@
+/* Configurações Gerais e Cores Baseadas na Natureza */
+:root {
+    --verde-escuro: #2E7D32;
+    --verde-principal: #4CAF50;
+    --verde-claro: #E8F5E9;
+    --texto-escuro: #212121;
+    --texto-claro: #757575;
+    --branco: #FFFFFF;
+    --bege-fundo: #FAFAFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bege-fundo);
+    color: var(--texto-escuro);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 40px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-principal));
+    color: var(--branco);
+    text-align: center;
+    padding: 60px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* Seções */
+h2 {
+    color: var(--verde-escuro);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Grid de Cards de Conceitos */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--verde-principal);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+}
+
+/* Galeria de Imagens */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.galeria-item {
+    background-color: var(--branco);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.img-clicavel {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.img-clicavel:hover {
+    opacity: 0.85;
+}
+
+.legenda {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--texto-claro);
+}
+
+/* Painel de Informação Interativo (JS) */
+#painel-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--verde-claro);
+    border: 1px solid var(--verde-principal);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease;
+}
+
+.escondido {
+    display: none;
+}
+
+/* Vídeos */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+@media(max-width: 500px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.video-box {
+    background-color: var(--branco);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.video-box h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--verde-escuro);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* Animação Simples */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
